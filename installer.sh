@@ -66,7 +66,7 @@ echo -e ""
 	##after removing AppArmor reboot is not obligatory
 #	echo -e "Please restart the server and run the installer again. AppArmor has been removed."
         #exit
-fi
+#fi
 
 # Install some standard utility packages required by the installer and/or ZPX.
 #apt-get -y install sudo wget vim make zip unzip git debconf-utils at

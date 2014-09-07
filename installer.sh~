@@ -55,16 +55,16 @@ echo -e "##############################################################"
 echo -e ""
 
 # We need to disable and remove AppArmor...
-[ -f /etc/init.d/apparmor ]
-if [ $? = "0" ]; then
-    echo -e ""
-    echo -e "Disabling and removing AppArmor, please wait..."
-    /etc/init.d/apparmor stop &> /dev/null
-	update-rc.d -f apparmor remove &> /dev/null
-	apt-get -y remove apparmor &> /dev/null
-	mv /etc/init.d/apparmor /etc/init.d/apparmpr.removed &> /dev/null
+#[ -f /etc/init.d/apparmor ]
+#if [ $? = "0" ]; then
+ #   echo -e ""
+ #   echo -e "Disabling and removing AppArmor, please wait..."
+#    /etc/init.d/apparmor stop &> /dev/null
+#	update-rc.d -f apparmor remove &> /dev/null
+#	apt-get -y remove apparmor &> /dev/null
+#	mv /etc/init.d/apparmor /etc/init.d/apparmpr.removed &> /dev/null
 	##after removing AppArmor reboot is not obligatory
-	echo -e "Please restart the server and run the installer again. AppArmor has been removed."
+#	echo -e "Please restart the server and run the installer again. AppArmor has been removed."
         #exit
 fi
 
